@@ -1,0 +1,103 @@
+html {
+  scroll-behavior: smooth;
+}
+/* body */
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* header  */
+
+nav ul {
+  padding-left: 0px;
+  height: 30vh;
+  overflow: scroll;
+}
+nav ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+nav ul li {
+  list-style-type: none;
+  font-size: 1.3rem;
+  border-bottom: 1px solid rgba(0, 22, 22, 0.4);
+  padding: 0.8rem;
+  cursor: pointer;
+}
+
+nav h1 {
+  text-align: center;
+  margin-bottom: -1rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(0, 22, 22, 0.4);
+}
+
+/* main */
+
+main {
+  padding: 0 2rem;
+}
+
+/* section */
+section p {
+  line-height: 1.6;
+  padding-left: 1rem;
+}
+
+section ul {
+  padding-left: 4rem;
+}
+
+section ul li {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* pre */
+
+pre {
+  padding: 1rem;
+  background-color: #f7f7f7;
+  white-space: pre-wrap;
+  margin-left: 2rem;
+}
+
+/* Desktop layout */
+
+@media (min-width: 815px) {
+  body {
+    display: grid;
+    grid-template-areas: "navigation documentation";
+  }
+
+  header {
+    border-right: 2px solid rgba(0, 22, 22, 0.4);
+    min-width: 350px;
+  }
+
+  nav {
+    grid-area: navigation;
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  nav h1 {
+    text-align: left;
+    margin-top: 0px;
+    padding-top: 2rem;
+    padding-left: 2rem;
+  }
+
+  nav ul {
+    overflow: visible;
+  }
+  main {
+    grid-area: documentation;
+  }
+}
